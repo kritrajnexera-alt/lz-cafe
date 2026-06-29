@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-burgundy: #3D0C11;
+  --color-burgundy-light: #5A1A20;
+  --color-gold: #C9A84C;
+  --color-gold-light: #E0C872;
+  --color-gold-dark: #A88A2E;
+  --color-ivory: #FDF6EC;
+  --color-ivory-dark: #F5EDE0;
+  --color-near-black: #0F0F0F;
+  --color-dark-surface: #1A1A1A;
+  --color-dark-card: #222222;
+  --color-text-dark: #1A1A1A;
+  --color-text-light: #F5F5F0;
+  --color-text-muted: #8B8B85;
+  --color-text-ivory: #EFE8DC;
+
+  --font-heading: "Cormorant Garamond", serif;
+  --font-body: "Inter", sans-serif;
+}
+
+body {
+  background-color: var(--color-ivory);
+  color: var(--color-text-dark);
+  font-family: var(--font-body);
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-near-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-light);
+}
